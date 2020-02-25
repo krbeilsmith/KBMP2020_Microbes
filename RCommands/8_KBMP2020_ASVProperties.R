@@ -223,6 +223,8 @@ ConsistentASVs <- c(RootsTaxa, RosLeavesTaxa, StemsTaxa, SiliquesTaxa)
 # Fraction of ASVs driving tissue effect that peak consistently in the same tissue for prevalence: 19%
 length(ConsistentASVs)/length(TissueVarASVs)
 
+# Repeat with ASVs driving stage effect that peak consistently at a timepoint: 24% prevalence, 12.5% relative abundance
+
 
 #################################################################################################################################################
 # How much overlap is there among pervasive, recurrent, prevalent, and abundant ASVs?

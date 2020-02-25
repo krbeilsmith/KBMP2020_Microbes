@@ -242,6 +242,12 @@ ggsave("~/Documents/KBMP2020_Microbes/Figures/Raup_PCoA.tiff", plot = pcoa, devi
 physeq_factored_plants_flowering <- subset_samples(physeq_factored,!(PlantPart %in% c("Soil","Roots")) & Stage%in%c("Flowering"))
 physeq_factored_plants_flowering <- prune_taxa(taxa_sums(physeq_factored_plants_flowering)>0,physeq_factored_plants_flowering)
 
+flowering_permanova_results <- adonis(t(otu_table(physeq_factored_plants_flowering)) ~Year/PlantPart + MiSeqRun/SamplePlate + Site,data.frame(sample_data(physeq_factored_plants_flowering)),method="raup",permutations=999)
+flowering_permanova_results
+
+# Tissue still has an effect just within the phyllosphere:
+# Year:PlantPart         8     3.054 0.38174  1.9659 0.04085  0.010 **
+
 # Calculate dissimilarity for flowering phyllosphere tissues
 raup_physeq_factored_plants_flowering <- phyloseq::distance(physeq_factored_plants_flowering, method = "raup")
 
