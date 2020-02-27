@@ -16,14 +16,14 @@ This directory contains *.R files with the commands needed to reproduce the anal
 
 7_KBMP2020_ASVDrivers.R		The regression coefficients from the PERMANOVA (4_KBMP2020_FindEffects.R) are used to identify the ASVs underlying tissue and temporal effects.
 
-8_KBMP2020_ASVProperties.R	Pervasive (vs. tissue-specific) and recurrent (vs. stage-specific) ASVs are removed from the dataset and PERMANOVAs and PCoAs are repeated. Figure 3 and Table S9.
+8_KBMP2020_ASVProperties.R	Pervasive (vs. tissue-specific) and recurrent (vs. stage-specific) ASVs are removed from the dataset and PERMANOVAs and PCoAs are repeated.
 				Prevalence and abundance of ASVs are also examined.
 
 9_KBMP2020_PlottingDF.R		For ASVs driving effects (7_KBMP2020_ASVDrivers.R), a dataframe is constructred with mean + stdev of relative abundance and the mean prevalence in each harvest condition.
-				Figures 4 and 5 (dotplots showing spatial distributions) and Figure 6 (time series).
+				Figures 3 and S9 (dotplots showing spatial distributions) and Figure 4 (time series).
 
 10_KBMP2020_Diversity.R		Several metrics of diversity (richness, phylogenetic diversity, max relative abundance, and evenness) are calculated for soil and plant samples from the Year 2 time series.
-				The relative abundance distributions for all ASVs are compared across timepoints. Figures 7 and 8.
+				The relative abundance distributions for all ASVs are compared across timepoints. Figures 5 and 6.
 
 
 
