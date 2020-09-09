@@ -1,0 +1,24 @@
+This directory contains *.R files with the commands needed to reproduce the analysis and plots in Beilsmith, Perisin, and Bergelson 2020: "Natural bacterial assemblages in Arabidopsis thaliana tissues become more distinguishable and diverse during host development." The order in which the files are used matters because some of the commands rely on variables created in other files.
+
+1_KBMP2020_ImportData.R			Assembles a phyloseq object from the 16S ASV table, taxonomy, tree, and sample metadata.
+
+2_KBMP2020_CommunitySurvey.R		The data are pruned to the most abundant ASVs and the relative abundance and counts of different bacterial classes in soil and plant tissue samples are compared.
+
+3_KBMP2020_Membership.R			Samples are compared for the number and proportion of ASVs they share, randomly or conditioned on sample variables. Figure 1A.
+
+4a_KBMP2020_PartitionVariance.R		Sample variables are tested for association with community composition in permutational ANOVA.
+4b_KBMP2020_Ordination.R		The matrix of community dissimilarities is used in PCoA.
+4c_KBMP2020_VarianceByTaxonomy.R	PERMANOVAs are repeated with different levels of taxonomic grouping in the dataset.
+4d_KBMP2020_AssociationRobustness.R	PERMANOVA and PCoAs are repeated with different distance metrics and preparations of the count data.
+
+5_KBMP2020_BetaDiversity.R	The distances between samples from leaves are compared to those between leaves and roots across developmental transitions.
+
+6_KBMP2020_ASVIndicators.R	A permutational test identifies associations between sample conditions and ASVs based on the Indicator Value Index.
+
+7_KBMP2020_PlottingDF.R		For ASVs associated with tissue type and stage, a dataframe is constructred with mean + stdev of relative abundance and the mean prevalence in each condition.
+
+8_KBMP2020_TimeSeries.R		Commands to produce time series plots of prevalence or relative abundance for indicator ASVs based on the dataframe in script #7.
+
+9_KBMP2020_DotPlot.R		Commands to produce dot plots showing the spatial distributions of indicator ASVs based on the dataframe in script #7.
+
+10_KBMP2020_Diversity.R		Several metrics of diversity are calculated for soil and plant samples from the Year 2 time series.
